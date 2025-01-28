@@ -1,4 +1,4 @@
+weaviate-client>=3.17.0
 streamlit
 sentence-transformers
-weaviate-client
 torch
