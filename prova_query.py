@@ -4,8 +4,8 @@ import streamlit as st
 from sentence_transformers import SentenceTransformer
 import weaviate
 import torch
-#from weaviate.gql.get import HybridFusion
-from weaviate.gql.query import HybridFusion
+from weaviate.gql.get import HybridFusion
+#from weaviate.gql.query import HybridFusion
 
 # Configurazione Weaviate
 cloud_name = "SentenzeToscana"
