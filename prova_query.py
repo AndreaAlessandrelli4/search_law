@@ -216,7 +216,7 @@ if st.button("Esegui Ricerca"):
     if not weaviate_filters["operands"]:
         st.warning("Nessun filtro selezionato. Verrà eseguita una ricerca senza filtri.")
         # Esegui la query
-        risultati = query_weaviate(query, num_results, alpha, weaviate_filters={})
+        risultati = query_weaviate(query, num_results, alpha, {})
     else:
         risultati = query_weaviate(query, num_results, alpha, weaviate_filters)
 
