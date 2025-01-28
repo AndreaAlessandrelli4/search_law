@@ -34,7 +34,7 @@ client = get_weaviate_client()
 
 # Funzione per generare gli embedding
 def generate_embeddings(entry, model=model_rag):
-    embedding = model.encode(entry, convert_to_numpy=True, normalize_embeddings=True)
+    embedding = model.encode(entry, normalize_embeddings=True)
     return embedding
 
 
