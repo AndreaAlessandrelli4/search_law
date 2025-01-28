@@ -1,6 +1,4 @@
 streamlit
 sentence-transformers
 weaviate-client
-torch  
-os
-json
+torch
