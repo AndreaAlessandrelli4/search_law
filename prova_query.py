@@ -33,15 +33,6 @@ st.markdown(
             color: white !important;  /* Testo bianco */
         }
 
-        /* Cambia colore dei titoli */
-        h1, h2, h3, h4, h5, h6 {
-            color: #333 !important;
-        }
-
-        /* Cambia colore del testo normale */
-        p, div {
-            color: #444 !important;
-        }
 
         /* Cambia colore dei pulsanti */
         .stButton>button {
@@ -86,6 +77,16 @@ st.markdown(
             color: black !important;
             font-weight: bold;
             font-size: 18px;
+        }
+
+        /* Cambia colore dei titoli */
+        h1, h2, h3, h4, h5, h6 {
+            color: #333 !important;
+        }
+
+        /* Cambia colore del testo normale */
+        p, div {
+            color: #444 !important;
         }
     </style>
     """,
