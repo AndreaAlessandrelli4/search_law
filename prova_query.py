@@ -89,7 +89,7 @@ st.markdown(
     <style>
         /* Cambia colore della barra dello slider (riempita) */
         .stSlider > div[data-baseweb="slider"] > div {
-            background: #007BFF !important;  /* Blu */
+            background: #D0D0D0 !important;  /* Blu */
         }
 
         /* Cambia colore del pallino dello slider */
