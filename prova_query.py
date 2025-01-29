@@ -61,7 +61,7 @@ st.markdown(
         
 
         /* Cambia colore del pallino dello slider */
-        div[data-baseweb="slider"] > div  > div  >div >div{
+        div.stSlider > div[data-baseweb="slider"] > div > div > div > div{
             background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
