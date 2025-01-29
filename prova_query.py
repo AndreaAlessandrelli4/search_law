@@ -55,14 +55,16 @@ st.markdown(
         .stButton>button:hover {
             background-color: #0056b3 !important;
         }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
-st.markdown(
-    """
-    <style>
+
+        /* Stile per il bottone di download */
+        .stDownloadButton > button {
+            color: white !important;   /* Testo bianco */
+            border-radius: 8px !important;  /* Angoli arrotondati */
+            padding: 8px 16px !important;  /* Spaziatura interna */
+            font-size: 16px !important;  /* Testo più leggibile */
+        }
+
         /* Cambia colore delle barre degli slider */
         [role="slider"] {
             background-color: #007BFF !important;  /* Blu */
@@ -90,20 +92,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <style>
-        /* Stile per il bottone di download */
-        .stDownloadButton > button {
-            color: white !important;   /* Testo bianco */
-            border-radius: 8px !important;  /* Angoli arrotondati */
-            padding: 8px 16px !important;  /* Spaziatura interna */
-            font-size: 16px !important;  /* Testo più leggibile */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 
 # Configurazione Weaviate
