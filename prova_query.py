@@ -194,7 +194,21 @@ if st.button("Esegui Ricerca"):
             if isinstance(value, tuple):  # Per range numerici
                 if value[0] == 0 and value[1] == 0:
                     continue
-                weaviate_filters["operands"].append({
+                elif sub_key=="dettagli_figli__numero_totale_di_figli":
+                    weaviate_filters["operands"].append({
+                        "operator": "And",
+                        "operands":[
+                            {"path": [f"{sub_key}"],
+                        "operator": "GreaterThanEqual",
+                        "valueNumber": value[0]
+                        },
+                        {
+                            "path": [f"{sub_key}"],
+                            "operator": "LessThanEqual",
+                            "valueNumber": value[1]
+                        }]}  )
+                else:
+                    weaviate_filters["operands"].append({
                     "operator": "And",
                     "operands":[
                         {"path": [f"{sub_key}"],
