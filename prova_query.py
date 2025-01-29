@@ -71,6 +71,8 @@ st.markdown(
                                 { color: #007BFF !important; }
 
 
+        div.stSlider > div[data-baseweb = "slider"] > div > div {background: #007BFF !important;}
+
         /* Linea di separazione nera */
         hr {
             border: 1px solid black !important;
