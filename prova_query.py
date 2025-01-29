@@ -55,7 +55,28 @@ st.markdown(
         .stButton>button:hover {
             background-color: #0056b3 !important;
         }
+    
+        /* Cambia colore delle barre degli slider */
+        [role="slider"] {
+            background-color: #007BFF !important;  /* Blu */
+        }
+
+        /* Linea di separazione nera */
+        hr {
+            border: 1px solid black !important;
+        }
+
+        /* Stile personalizzato per la separazione testuale */
+        .custom-divider {
+            color: black !important;
+            font-weight: bold;
+            font-size: 18px;
+        }
     </style>
+    """,
+    unsafe_allow_html=True
+)
+
     """,
     unsafe_allow_html=True
 )
