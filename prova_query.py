@@ -328,7 +328,18 @@ if st.button("Esegui Ricerca"):
     try:
         if len(risultati)>1:
             for r in risultati:
-                st.write(f"**ID: {r['id_originale']}**")
+                #st.write(f"**ID: {r['id_originale']}**")
+                 # Creazione del file di testo per il download
+                testo_sentenza = r['testo_completo']
+                file_name = f"Sentenza_{r['id_originale']}.txt"
+    
+                # Bottone per il download
+                st.download_button(
+                    label=f"📥 Scarica Sentenza {r['id_originale']}",
+                    data=testo_sentenza,
+                    file_name=file_name,
+                    mime="text/plain"
+                )
                 st.write(f"## Summary:")
                 st.write(r['summary'])
                 st.write("## Meta-Dati:")
