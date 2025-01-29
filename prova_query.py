@@ -60,7 +60,7 @@ st.markdown(
 
         
         div.stSlider > div[data-baseweb = "slider"] > div[data-testid="stTickBar"] > div {
-        background: rgb(1 1 1 / 0%); }
+        background: #007BFF !important; }
         
 
         div.stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"]{
@@ -68,7 +68,7 @@ st.markdown(
         box-shadow: rgb(14 38 74 / 20%) 0px 0px 0px 0.2rem;}
 
         div.stSlider > div[data-baseweb="slider"] > div > div > div > div
-                                { color: rgb(14, 38, 74); }
+                                { color: #007BFF !important; }
 
 
         /* Linea di separazione nera */
