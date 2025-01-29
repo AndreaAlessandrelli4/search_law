@@ -65,20 +65,9 @@ st.markdown(
             background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
+
         
 
-
-
-        /* Cambia colore delle barre degli slider */
-        [role="slider"] {
-            background-color: #007BFF !important;  /* Blu */
-        }
-
-        /* Un'altra variante per eliminare il background */
-div[data-baseweb="slider"] div[role="slider"] ~ div {
-    background: transparent !important;
-    box-shadow: none !important;
-}
 
 
         /* Linea di separazione nera */
