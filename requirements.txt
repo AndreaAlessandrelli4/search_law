@@ -1,4 +1,4 @@
 weaviate-client==3.26.5
-streamlit
+streamlit==1.41.1
 sentence-transformers==3.0.1
-torch
+torch==2.5.0
