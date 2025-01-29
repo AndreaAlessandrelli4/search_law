@@ -136,7 +136,7 @@ filters_structure = {
 
 # Sidebar per la query
 st.sidebar.title("Query Settings")
-query = st.sidebar.text_input("Inserisci la tua query:", value="violenza o abuso")
+query = st.sidebar.text_input("Inserisci la tua query:", value=" ")
 num_results = st.sidebar.number_input("Numero massimo di risultati:", min_value=1, max_value=100, value=5)
 alpha = st.sidebar.slider(
     "Seleziona soglia di similarità (0-1):",
@@ -162,7 +162,7 @@ for main_key, sub_filters in filters_structure.items():
             if isinstance(options, list) and all(isinstance(i, str) for i in options):
                 # Menu a tendina per opzioni testuali
                 selected_filters[main_key][sub_key] = st.selectbox(
-                    f"{sub_key}:",
+                    f"{sub_key.split('__')[-1].replace('_',' ')}:",
                     options,
                     index=len(options)-1,
                     key=f"{main_key}_{sub_key}"
