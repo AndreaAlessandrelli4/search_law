@@ -55,7 +55,14 @@ st.markdown(
         .stButton>button:hover {
             background-color: #0056b3 !important;
         }
-    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <style>
         /* Cambia colore delle barre degli slider */
         [role="slider"] {
             background-color: #007BFF !important;  /* Blu */
@@ -73,10 +80,6 @@ st.markdown(
             font-size: 18px;
         }
     </style>
-    """,
-    unsafe_allow_html=True
-)
-
     """,
     unsafe_allow_html=True
 )
@@ -322,7 +325,7 @@ if st.button("Esegui Ricerca"):
                 st.write(r['summary'])
                 st.write("## Meta-Dati:")
                 st.json(r['metaDati'])
-                st.write("\n----------------------\n\n")
+                st.markdown("<div class='custom-divider'>----------------------</div>", unsafe_allow_html=True)
         else:
             st.write("Nessun risultato compatibile con i criteri di ricerca")
     except:
