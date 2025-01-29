@@ -78,9 +78,6 @@ st.markdown(
             background: #007BFF !important;  /* Blu */
         }
 
-        /* Cambia colore della barra non riempita dello slider */
-        .stSlider > div[data-baseweb="slider"] > div:first-child {
-            background: #D0D0D0 !important;  /* Grigio chiaro */
 
         /* Stile personalizzato per la separazione testuale */
         .custom-divider {
