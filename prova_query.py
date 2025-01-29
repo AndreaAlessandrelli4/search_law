@@ -67,10 +67,15 @@ st.markdown(
             background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
-        /* Cambia colore della barra non riempita dello slider */
-        .stSlider > div[data-baseweb="slider"] > div:first-child {
-            background: #D0D0D0 !important;  /* Grigio chiaro */
+        
+
+
+
+        /* Cambia colore delle barre degli slider */
+        [role="slider"] {
+            background-color: #007BFF !important;  /* Blu */
         }
+
 
         /* Linea di separazione nera */
         hr {
