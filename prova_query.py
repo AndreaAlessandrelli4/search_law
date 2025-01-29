@@ -325,7 +325,7 @@ if st.button("Esegui Ricerca"):
                 st.write(r['summary'])
                 st.write("## Meta-Dati:")
                 st.json(r['metaDati'])
-                st.markdown("<div class='custom-divider'>----------------------</div>", unsafe_allow_html=True)
+                st.write("\n----------------------\n\n")
         else:
             st.write("Nessun risultato compatibile con i criteri di ricerca")
     except:
