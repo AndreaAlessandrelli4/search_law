@@ -84,27 +84,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <style>
-        /* Cambia colore della barra dello slider (riempita) */
-        .stSlider > div[data-baseweb="slider"] > div {
-            background: #D0D0D0 !important;  /* Blu */
-        }
-
-        /* Cambia colore del pallino dello slider */
-        div[data-baseweb="slider"] > div > div {
-             background: #D0D0D0 !important;  /* Grigio chiaro */
-        }
-
-        /* Cambia colore della barra non riempita dello slider */
-        .stSlider > div[data-baseweb="slider"] > div:first-child {
-            background: #D0D0D0 !important;  /* Grigio chiaro */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 
 
