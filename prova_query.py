@@ -182,6 +182,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 diz = {}
                 diz['id_originale'] = i['id_originale']
                 diz['summary'] = i['summary']
+                diz['testo_completo'] = i['testo_completo']
                 diz['metaDati'] = json.loads(i['estrazione_mistral'])
                 risposta_finale.append(diz)
                 risposta_finale=risposta_finale[0:num_max]
