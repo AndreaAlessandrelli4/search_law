@@ -71,6 +71,8 @@ st.markdown(
             background-color: #007BFF !important;  /* Blu */
         }
 
+        div.stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"]{
+        background-color: rgb(14, 38, 74); box-shadow: rgb(14 38 74 / 20%) 0px 0px 0px 0.2rem;}
 
 
         /* Linea di separazione nera */
