@@ -18,7 +18,7 @@ st.markdown(
 
         /* Cambia il colore della sidebar (grigio chiaro) */
         .stSidebar {
-            background-color: #f0f0f0 !important;
+            background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
         /* Box dei filtri con background scuro */
