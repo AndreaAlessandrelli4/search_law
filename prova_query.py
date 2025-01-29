@@ -7,6 +7,7 @@ import weaviate
 import torch
 from weaviate.gql.get import HybridFusion
 #from weaviate.gql.query import HybridFusion
+
 st.markdown(
     """
     <style>
@@ -14,11 +15,39 @@ st.markdown(
         body, .stApp {
             background-color: white !important;
         }
+
+        /* Cambia colore dei titoli */
+        h1, h2, h3, h4, h5, h6 {
+            color: #333333 !important;  /* Grigio scuro */
+        }
+
+        /* Cambia colore del testo normale */
+        p, div {
+            color: #444444 !important;  /* Grigio leggermente più chiaro */
+            font-size: 16px;  /* Dimensione testo */
+        }
+
+        /* Cambia colore delle scritte della sidebar */
+        .stSidebar {
+            background-color: #f8f9fa !important;  /* Grigio chiaro */
+        }
+
+        /* Cambia colore dei pulsanti */
+        .stButton>button {
+            background-color: #007BFF !important;  /* Blu */
+            color: white !important;
+            border-radius: 8px; /* Angoli arrotondati */
+            padding: 10px 20px;
+        }
+
+        /* Cambia colore quando il pulsante è premuto */
+        .stButton>button:hover {
+            background-color: #0056b3 !important; /* Blu più scuro */
+        }
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 
 # Configurazione Weaviate
