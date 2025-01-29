@@ -240,13 +240,16 @@ if st.button("Esegui Ricerca"):
     
     st.write("Risultati:")
     try:
-        for r in risultati:
-            st.write(f"**ID: {r['id_originale']}**")
-            st.write(f"# Summary:")
-            st.write(r['summary'])
-            st.write("# Meta-Dati:")
-            st.json(r['metaDati'])
-            st.write("\n----------------------\n\n")
+        if len(risultati)>1:
+            for r in risultati:
+                st.write(f"**ID: {r['id_originale']}**")
+                st.write(f"# Summary:")
+                st.write(r['summary'])
+                st.write("# Meta-Dati:")
+                st.json(r['metaDati'])
+                st.write("\n----------------------\n\n")
+        else:
+            st.write("Nessun risultato compatibile con i criteri di ricerca")
     except:
         st.write(list(generate_embeddings(query)))
         st.write(risultati)
