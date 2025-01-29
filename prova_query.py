@@ -348,5 +348,5 @@ if st.button("Esegui Ricerca"):
         else:
             st.write("Nessun risultato compatibile con i criteri di ricerca")
     except:
-        st.write(list(generate_embeddings(query)))
+        #st.write(list(generate_embeddings(query)))
         st.write(risultati)
