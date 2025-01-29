@@ -66,9 +66,20 @@ st.markdown(
         }
 
 
-        
+        /* Cambia colore delle barre degli slider */
+        [role="slider"] {
+            background-color: #007BFF !important;  /* Blu */
+        }
 
 
+/* Rimuove lo sfondo dai numeri agli estremi dello slider */
+div[data-baseweb="slider"] > div:first-child,
+div[data-baseweb="slider"] > div:last-child {
+    background: transparent !important;  /* Sfondo trasparente */
+    box-shadow: none !important;  /* Nessuna ombra */
+    border: none !important;  /* Nessun bordo */
+    color: white !important; /* Cambia colore del testo se necessario */
+}
 
         /* Linea di separazione nera */
         hr {
