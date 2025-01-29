@@ -117,6 +117,7 @@ filters_structure = {
         "dettagli_matrimonio__regime_patrimoniale": ['comunione dei beni', 'separazione dei beni', 'NON SPECIFICATO']
     },
     'dettagli_figli': {
+        "dettagli_figli__numero_totale_figli": [0, 10],
         "dettagli_figli__numero_di_figli_minorenni": [0, 10],
         "dettagli_figli__numero_di_figli_maggiorenni_economicamente_indipendenti": [0, 10],
         "dettagli_figli__numero_di_figli_maggiorenni_non_economicamente_indipendenti": [0, 10],
@@ -207,7 +208,7 @@ if st.button("Esegui Ricerca"):
                     }]}  )
             elif value != "NON SPECIFICATO":  # Applica il filtro solo se diverso da "NON SPECIFICATO"
                 weaviate_filters["operands"].append({
-                    "path": [f"{sub_key}"],
+                    "path": [f"{sub_key.split('__')[-1].replace('_',' ')}"],
                     "operator": "Equal",
                     "valueText": value
                 })
