@@ -171,7 +171,7 @@ for main_key, sub_filters in filters_structure.items():
             elif isinstance(options, list) and len(options) == 2 and all(isinstance(i, int) for i in options):
                 # Slider per range numerici
                 selected_filters[main_key][sub_key] = st.slider(
-                    f"{sub_key.split('__')[-1].replace('_',' ')}:}:",
+                    f"{sub_key.split('__')[-1].replace('_',' ')}:",
                     min_value=options[0],
                     max_value=options[1],
                     value=(options[0], options[1]),
