@@ -59,7 +59,7 @@ st.markdown(
 
 
         /* Cambia colore delle barre degli slider */
-        .stslider {
+        .stSlider {
             background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
