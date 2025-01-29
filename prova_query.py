@@ -7,6 +7,19 @@ import weaviate
 import torch
 from weaviate.gql.get import HybridFusion
 #from weaviate.gql.query import HybridFusion
+st.markdown(
+    """
+    <style>
+        /* Cambia colore di sfondo a bianco */
+        body, .stApp {
+            background-color: white !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 # Configurazione Weaviate
 cloud_name = "SentenzeToscana"
