@@ -69,7 +69,7 @@ st.markdown(
 
         /* Cambia colore delle barre degli slider */
         [role="slider"] {
-            background-color: #007BFF !important;  /* Blu */
+            background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
         /* Linea di separazione nera */
@@ -79,7 +79,7 @@ st.markdown(
 
         /* Cambia colore del pallino dello slider */
         div[data-baseweb="slider"] > div > div {
-            background: #007BFF !important;  /* Blu */
+            background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
 
