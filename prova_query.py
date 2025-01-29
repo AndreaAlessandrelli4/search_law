@@ -137,7 +137,6 @@ filters_structure = {
 
 # Sidebar per la query
 st.sidebar.title("Query Settings")
-query = st.sidebar.text_input("Inserisci la tua query:", value=" ")
 num_results = st.sidebar.number_input("Numero massimo di risultati:", min_value=1, max_value=100, value=5)
 alpha = st.sidebar.slider(
     "Seleziona soglia di similarità (0-1):",
@@ -148,7 +147,8 @@ alpha = st.sidebar.slider(
 )
 
 
-
+st.title("Query")
+query = st.text_input("Inserisci la tua query:", value=" ")
 # Generazione dinamica dei filtri con menu a tendina espandibili
 st.title("Filtri di Ricerca")
 
