@@ -75,7 +75,7 @@ st.markdown(
 
         /* Cambia colore del pallino dello slider */
         div[data-baseweb="slider"] > div > div {
-            background: #007BFF !important;  /* Blu */
+            background: #D0D0D0 !important;  /* Blu */
         }
 
         /* Cambia colore della barra non riempita dello slider */
