@@ -59,7 +59,8 @@ st.markdown(
 
 
         
-
+        div.stSlider > div[data-baseweb = "slider"] > div[data-testid="stTickBar"] > div {
+        background: rgb(1 1 1 / 0%); }
         
 
         div.stSlider > div[data-baseweb="slider"] > div > div > div[role="slider"]{
