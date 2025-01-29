@@ -279,8 +279,8 @@ for main_key, sub_filters in filters_structure.items():
                 )
 
 # Pulsante per eseguire la query
-#if st.button("Esegui Ricerca"):
-#    st.write("Filtri selezionati:")
+if st.button("Esegui Ricerca"):
+    #st.write("Filtri selezionati:")
     
 
     # Convertire i filtri in formato Weaviate
@@ -326,7 +326,7 @@ for main_key, sub_filters in filters_structure.items():
                     "operator": "Equal",
                     "valueText": value
                 })
-    st.json(weaviate_filters)
+    #st.json(weaviate_filters)
 
     # Verifica se ci sono filtri validi
     if not weaviate_filters["operands"]:
