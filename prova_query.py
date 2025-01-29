@@ -74,6 +74,13 @@ st.markdown(
             background-color: #007BFF !important;  /* Blu */
         }
 
+        /* Rimuove lo sfondo dai numeri agli estremi dello slider */
+div[data-baseweb="slider"] > div > div > div {
+    background: transparent !important;  /* Rende lo sfondo trasparente */
+    box-shadow: none !important;  /* Rimuove eventuali ombre */
+    border: none !important;  /* Elimina eventuali bordi */
+}
+
 
         /* Linea di separazione nera */
         hr {
