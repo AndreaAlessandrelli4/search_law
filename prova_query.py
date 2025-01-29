@@ -58,9 +58,18 @@ st.markdown(
         }
 
 
-        /* Cambia colore delle barre degli slider */
-        .stSlider {
+        .stSlider > div[data-baseweb="slider"] > div {
             background-color: #1E90FF !important; /* Blu più chiaro */
+        }
+
+        /* Cambia colore del pallino dello slider */
+        div[data-baseweb="slider"] > div > div {
+            background-color: #1E90FF !important; /* Blu più chiaro */
+        }
+
+        /* Cambia colore della barra non riempita dello slider */
+        .stSlider > div[data-baseweb="slider"] > div:first-child {
+            background: #D0D0D0 !important;  /* Grigio chiaro */
         }
 
         /* Linea di separazione nera */
