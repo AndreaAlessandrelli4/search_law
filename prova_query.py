@@ -232,4 +232,5 @@ if st.button("Esegui Ricerca"):
             st.json(r['metaDati'])
             st.write("\n----------------------\n\n")
     except:
+        st.write(list(generate_embeddings(query)))
         st.write(risultati)
