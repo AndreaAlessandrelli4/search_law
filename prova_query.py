@@ -61,7 +61,7 @@ st.markdown(
         
 
         /* Cambia colore del pallino dello slider */
-        div[data-baseweb="slider"] > div > div {
+        div[data-baseweb="slider"] > div  {
             background-color: #1E90FF !important; /* Blu più chiaro */
         }
 
@@ -72,14 +72,6 @@ st.markdown(
         }
 
 
-/* Rimuove lo sfondo dai numeri agli estremi dello slider */
-div[data-baseweb="slider"] > div:first-child,
-div[data-baseweb="slider"] > div:last-child {
-    background: transparent !important;  /* Sfondo trasparente */
-    box-shadow: none !important;  /* Nessuna ombra */
-    border: none !important;  /* Nessun bordo */
-    color: white !important; /* Cambia colore del testo se necessario */
-}
 
         /* Linea di separazione nera */
         hr {
