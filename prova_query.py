@@ -90,7 +90,21 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
+st.markdown(
+    """
+    <style>
+        /* Stile per il bottone di download */
+        .stDownloadButton > button {
+            color: white !important;   /* Testo bianco */
+            background-color: #007BFF !important; /* Blu */
+            border-radius: 8px !important;  /* Angoli arrotondati */
+            padding: 8px 16px !important;  /* Spaziatura interna */
+            font-size: 16px !important;  /* Testo più leggibile */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # Configurazione Weaviate
@@ -265,8 +279,8 @@ for main_key, sub_filters in filters_structure.items():
                 )
 
 # Pulsante per eseguire la query
-if st.button("Esegui Ricerca"):
-    st.write("Filtri selezionati:")
+#if st.button("Esegui Ricerca"):
+#    st.write("Filtri selezionati:")
     
 
     # Convertire i filtri in formato Weaviate
