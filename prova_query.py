@@ -317,6 +317,7 @@ if st.button("Esegui Ricerca"):
 
     
     st.write("# Risultati:")
+    st.write("\n----------------------\n\n")
     try:
         if len(risultati)>1:
             for r in risultati:
