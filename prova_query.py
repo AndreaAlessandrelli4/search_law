@@ -77,10 +77,8 @@ st.markdown(
             border: 1px solid black !important;
         }
 
-        /* Cambia colore del pallino dello slider */
-        div[data-baseweb="slider"] > div > div {
-            background-color: #1E90FF !important; /* Blu più chiaro */
-        }
+
+        
 
 
         /* Stile personalizzato per la separazione testuale */
