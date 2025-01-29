@@ -96,7 +96,6 @@ st.markdown(
         /* Stile per il bottone di download */
         .stDownloadButton > button {
             color: white !important;   /* Testo bianco */
-            background-color: #007BFF !important; /* Blu */
             border-radius: 8px !important;  /* Angoli arrotondati */
             padding: 8px 16px !important;  /* Spaziatura interna */
             font-size: 16px !important;  /* Testo più leggibile */
