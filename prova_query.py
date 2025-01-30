@@ -359,6 +359,8 @@ if st.button("Esegui Ricerca"):
                 st.write(f"## Riferimenti a leggi:")
                 try:
                     rr = json.loads(r['riferimenti_legge'])
+                except:
+                    print(r['riferimenti_legge'])
                 st.write(rr)
                 st.write("## Meta-Dati:")
                 st.json(r['metaDati'])
