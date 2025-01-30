@@ -106,7 +106,7 @@ st.markdown(
 
 
 # Configurazione Weaviate
-cloud_name = "SentenzeToscana"
+cloud_name = "TestoTotale"
 
 key = os.getenv('WEAVIATE_API_KEY')
 if not key:
