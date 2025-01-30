@@ -121,14 +121,19 @@ def load_model():
 model_rag = load_model()
 
 
-@st.cache_resource
-def get_weaviate_client():
-    return weaviate.Client(
+#@st.cache_resource
+#def get_weaviate_client():
+#    return weaviate.Client(
+#    url=url,
+#    auth_client_secret=weaviate.auth.AuthApiKey(api_key=key),
+#)
+    
+#client = get_weaviate_client()  
+
+client = weaviate.Client(
     url=url,
     auth_client_secret=weaviate.auth.AuthApiKey(api_key=key),
 )
-    
-client = get_weaviate_client()  
 
 # Funzione per generare gli embedding
 def generate_embeddings(entry, model=model_rag):
