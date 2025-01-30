@@ -156,7 +156,7 @@ def collect_paths(data):
 
 # Funzione per eseguire la query su Weaviate
 def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale", 'summary'],
-                   retrieved_proop=["testo_parziale", 'estrazione_mistral', 'summary', 'testo_completo', 'id_originale']):
+                   retrieved_proop=["riferimenti_legge","testo_parziale", 'estrazione_mistral', 'summary', 'testo_completo', 'id_originale']):
     more_prop = collect_paths(filters)
     if len(more_prop)>=1:
         retrieved_proop = [*retrieved_proop, *more_prop]
@@ -196,6 +196,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 diz['summary'] = i['summary']
                 diz['testo_completo'] = i['testo_completo']
                 diz['metaDati'] = json.loads(i['estrazione_mistral'])
+                diz['riferimenti_legge']= i["riferimenti_legge"]
                 risposta_finale.append(diz)
                 risposta_finale=risposta_finale[0:num_max]
     except:
@@ -356,6 +357,7 @@ if st.button("Esegui Ricerca"):
                 st.write(f"## Summary:")
                 st.write(r['summary'])
                 st.write("## Meta-Dati:")
+                st.write(r['riferimenti_legge'])
                 st.json(r['metaDati'])
                 st.write("\n----------------------\n\n")
         else:
