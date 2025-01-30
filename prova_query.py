@@ -356,14 +356,17 @@ if st.button("Esegui Ricerca"):
                 )
                 st.write(f"## Summary:")
                 st.write(r['summary'])
-                st.write(f"## Riferimenti a leggi:")
-                try:
-                    rr = json.loads(r['riferimenti_legge'])
-                except:
-                    print(r['riferimenti_legge'])
-                st.write(rr)
-                st.write("## Meta-Dati:")
-                st.json(r['metaDati'])
+                with st.expander("📜 Riferimenti ad articoli e leggi (clicca per visualizzare)"):
+                    try:
+                        rr = json.loads(r['riferimenti_legge'])
+                        for nome, http in rr.items():
+                            st.write(f"[{nome}]({http})")  # Link cliccabili
+                    except:
+                        st.write("Non sono stati trovati riferimenti di legge.")
+                        
+                with st.expander("Meta-Dati (clicca per visualizzare)"):
+                    st.json(r['metaDati'])
+                
                 st.write("\n----------------------\n\n")
         else:
             st.write("Nessun risultato compatibile con i criteri di ricerca")
