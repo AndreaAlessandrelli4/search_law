@@ -356,8 +356,9 @@ if st.button("Esegui Ricerca"):
                 )
                 st.write(f"## Summary:")
                 st.write(r['summary'])
-                st.write("## Meta-Dati:")
+                st.write(f"## Riferimenti a leggi:")
                 st.write(r['riferimenti_legge'])
+                st.write("## Meta-Dati:")
                 st.json(r['metaDati'])
                 st.write("\n----------------------\n\n")
         else:
