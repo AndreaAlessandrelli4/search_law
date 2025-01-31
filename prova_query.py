@@ -364,8 +364,16 @@ if st.button("Esegui Ricerca"):
                 with st.expander("📜 Riferimenti ad articoli e leggi (clicca per visualizzare)"):
                     try:
                         rr = json.loads(r['riferimenti_legge'])
+                        string = []
                         for nome, http in rr.items():
-                            st.write(f"[{nome}]({http})")  # Link cliccabili
+                            if nome == "":
+                                continue
+                            string.append(f"[{nome}]({http})")
+                        if len(string)==0
+                        
+                        else:
+                            for strs in strings:
+                                st.write(strs)  # Link cliccabili
                     except:
                         st.write("Non sono stati trovati riferimenti di legge.")
                         
