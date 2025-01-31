@@ -195,6 +195,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
             if ids_temp not in ids:
                 ids.append(ids_temp)
                 diz = {}
+                diz['query_score'] = i["_additional"]["score"]
                 diz['id_originale'] = i['id_originale']
                 diz['summary'] = i['summary']
                 diz['testo_completo'] = i['testo_completo']
@@ -349,7 +350,8 @@ if st.button("Esegui Ricerca"):
                  # Creazione del file di testo per il download
                 testo_sentenza = r['testo_completo']
                 file_name = f"Sentenza_{r['id_originale']}.txt"
-    
+
+                st.write(f"Query hybrid score: {r['id_originale']}")
                 # Bottone per il download
                 st.download_button(
                     label=f"📥 Scarica Sentenza {r['id_originale']}",
