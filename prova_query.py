@@ -175,8 +175,8 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 alpha=alpha,
                 fusion_type=HybridFusion.RELATIVE_SCORE,
             )
-            .with_autocut(2)
             .with_where(filters)
+            .with_autocut(2)
             .do())
     else:
         response = (
