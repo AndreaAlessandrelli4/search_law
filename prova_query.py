@@ -333,7 +333,7 @@ if st.button("Esegui Ricerca"):
 
     # Verifica se ci sono filtri validi
     if not weaviate_filters["operands"]:
-        st.warning("Nessun filtro selezionato. Verrà eseguita una ricerca senza filtri.")
+        st.warning("⚠️Nessun filtro selezionato. Verrà eseguita una ricerca senza filtri.")
         # Esegui la query
         risultati = query_weaviate(query, num_results, alpha, {})
     else:
@@ -351,7 +351,7 @@ if st.button("Esegui Ricerca"):
                 testo_sentenza = r['testo_completo']
                 file_name = f"Sentenza_{r['id_originale']}.txt"
                 if float(r['query_score']) < 0.25:
-                    st.write("""Tutti i risultati seguenti hanno uno score di similarità troppo basso con la query inserita.""")
+                    st.write("""‼️‼️‼️Tutti i risultati seguenti hanno uno score di similarità troppo basso con la query inserita.""")
                     break
                 st.write(f"Query hybrid score: {r['query_score']}")
                 # Bottone per il download
@@ -372,19 +372,19 @@ if st.button("Esegui Ricerca"):
                                 continue
                             stringx.append(f"[{nome}]({http})")
                         if len(stringx)==0:
-                            st.write("Non sono stati trovati riferimenti di legge.")
+                            st.write("‼️Non sono stati trovati riferimenti di legge.")
                         else:
                             for strs in stringx:
                                 st.write(strs)  # Link cliccabili
                     except:
-                        st.write("Non sono stati trovati riferimenti di legge.")
+                        st.write("‼️Non sono stati trovati riferimenti di legge.")
                         
                 with st.expander("Meta-Dati (clicca per visualizzare)"):
                     st.json(r['metaDati'])
                 
                 st.write("\n----------------------\n\n")
         else:
-            st.write("Nessun risultato compatibile con i criteri di ricerca")
+            st.write("🚨Nessun risultato compatibile con i criteri di ricerca🚨")
     except:
         #st.write(list(generate_embeddings(query)))
         st.write(risultati)
