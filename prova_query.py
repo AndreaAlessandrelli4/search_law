@@ -174,8 +174,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 properties=search_prop,
                 alpha=alpha,
                 fusion_type=HybridFusion.RELATIVE_SCORE,
-            ).with_where(filters).with_additional("score")
-    .with_autocut(5).do())
+            ).with_where(filters).do())
     else:
         response = (
             client.query
@@ -186,8 +185,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 properties=search_prop,
                 alpha=alpha,
                 fusion_type=HybridFusion.RELATIVE_SCORE,
-            ).with_additional("score")
-    .with_autocut(3).do())
+            ).with_additional("score").do())
         
     ids = []
     risposta_finale = []
