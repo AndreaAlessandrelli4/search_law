@@ -369,8 +369,8 @@ if st.button("Esegui Ricerca"):
                             if nome == "":
                                 continue
                             string.append(f"[{nome}]({http})")
-                        if len(string)==0
-                        
+                        if len(string)==0:
+                            st.write("Non sono stati trovati riferimenti di legge.")
                         else:
                             for strs in strings:
                                 st.write(strs)  # Link cliccabili
