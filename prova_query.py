@@ -350,7 +350,8 @@ if st.button("Esegui Ricerca"):
                  # Creazione del file di testo per il download
                 testo_sentenza = r['testo_completo']
                 file_name = f"Sentenza_{r['id_originale']}.txt"
-
+                if r['query_score'] < 0.25:
+                    continue
                 st.write(f"Query hybrid score: {r['query_score']}")
                 # Bottone per il download
                 st.download_button(
