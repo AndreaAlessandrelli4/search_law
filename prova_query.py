@@ -253,7 +253,7 @@ filters_structure = {
 st.sidebar.title("Query Settings")
 num_results = st.sidebar.number_input("Numero massimo di risultati:", min_value=1, max_value=100, value=5)
 alpha = st.sidebar.slider(
-    "Seleziona tipo di ricerca:  \n[0:completamente per keywords - 1:completamente semantica]",
+    "Seleziona tipo di ricerca:  \n[0: solo keywords - 1: solo semantica]",
     min_value=0.0,
     max_value=1.0,
     value=0.8,  # Valore di default
