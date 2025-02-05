@@ -350,8 +350,8 @@ if st.button("Esegui Ricerca"):
                  # Creazione del file di testo per il download
                 testo_sentenza = r['testo_completo']
                 file_name = f"Sentenza_{r['id_originale']}.txt"
-                if float(r['query_score']) < 0.25:
-                    st.write("""‼️‼️‼️Tutti i risultati seguenti hanno uno score di similarità troppo basso con la query inserita.""")
+                if float(r['query_score']) < 0.6:
+                    st.write("""‼️‼️Tutti i risultati seguenti hanno uno score di similarità troppo basso con la query inserita.""")
                     break
                 st.write(f"Query hybrid score: {r['query_score']}")
                 # Bottone per il download
