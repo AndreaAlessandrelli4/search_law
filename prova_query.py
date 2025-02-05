@@ -204,9 +204,9 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 ids.append(ids_temp)
                 diz = {}
                 try:
-                    diz['query_score'] = i["_additional"]["explainScore"]
+                    diz['query_score'] = l*i["_additional"]["explainScore"]
                 except:
-                    diz['query_score'] = i["_additional"]["explainScore"]
+                    diz['query_score'] = l*i["_additional"]["explainScore"]
                 diz['id_originale'] = i['id_originale']
                 diz['summary'] = i['summary']
                 diz['testo_completo'] = i['testo_completo']
