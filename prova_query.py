@@ -158,6 +158,12 @@ def collect_paths(data):
     return paths
 
 
+def scores(text):
+    matches = re.findall(r'contributed\s+(\d+\.+\d+)', text)
+    return [float(x) for x in matches]
+
+
+
 
 # Funzione per eseguire la query su Weaviate
 def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale", 'summary'],
@@ -174,7 +180,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 properties=search_prop,
                 alpha=alpha,
                 fusion_type=HybridFusion.RELATIVE_SCORE,
-            ).with_where(filters).with_additional("score").do())
+            ).with_where(filters).with_additional(["score", "explainScore"]).do())
     else:
         response = (
             client.query
@@ -185,7 +191,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
                 properties=search_prop,
                 alpha=alpha,
                 fusion_type=HybridFusion.RELATIVE_SCORE,
-            ).with_additional("score").do())
+            ).with_additional(["score", "explainScore"]).do())
         
     ids = []
     risposta_finale = []
@@ -195,7 +201,7 @@ def query_weaviate(query, num_max, alpha, filters, search_prop=["testo_parziale"
             if ids_temp not in ids:
                 ids.append(ids_temp)
                 diz = {}
-                diz['query_score'] = float(i["_additional"]["score"])
+                diz['query_score'] = scores(i["_additional"]["explainScore"])
                 diz['id_originale'] = i['id_originale']
                 diz['summary'] = i['summary']
                 diz['testo_completo'] = i['testo_completo']
@@ -350,7 +356,7 @@ if st.button("Esegui Ricerca"):
                  # Creazione del file di testo per il download
                 testo_sentenza = r['testo_completo']
                 file_name = f"Sentenza_{r['id_originale']}.txt"
-                if float(r['query_score']) < 0.6:
+                if r['query_score'][0] < 0.6 and r['query_score'][1] < 0.6:
                     st.write("""‼️‼️Tutti i risultati seguenti hanno uno score di similarità troppo basso con la query inserita.""")
                     break
                 st.write(f"Query hybrid score: {r['query_score']}")
