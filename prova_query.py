@@ -161,8 +161,8 @@ def collect_paths(data):
 
 def scores(text):
     # Trova tutti i valori dopo 'normalized score:'
-    matches = re.findall(r'normalized score\:\s+\d\.\d+', text)
-    return matches
+    matches = re.findall(r'normalized score:\s+\d\.\d+', text)
+    return [float(x) for x in matches]
 
 
 
