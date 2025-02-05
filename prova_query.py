@@ -159,7 +159,7 @@ def collect_paths(data):
 
 
 def scores(text):
-    matches = re.findall(r'contributed\s+(\d+\.+\d+)', text)
+    matches = re.findall(r'normalized score\:\s+(\d+\.+\d+)', text)
     return [float(x) for x in matches]
 
 
