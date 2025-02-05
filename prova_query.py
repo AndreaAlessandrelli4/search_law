@@ -356,7 +356,7 @@ if st.button("Esegui Ricerca"):
                 st.write(f"Query hybrid score: {r['query_score']}")
                 # Bottone per il download
                 st.download_button(
-                    label=f"📥 Scarica Sentenza {r['id_originale']}",
+                    label=f"📥 Scarica Sentenza",# {r['id_originale']}",
                     data=testo_sentenza,
                     file_name=file_name,
                     mime="text/plain"
