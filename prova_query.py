@@ -113,7 +113,8 @@ key = os.getenv('WEAVIATE_API_KEY')
 if not key:
     raise ValueError("La chiave API di Weaviate non è configurata. Verifica i secrets su Streamlit Cloud.")
 
-url = "https://wdddqkdjqfwdxaklotxqqa.c0.europe-west3.gcp.weaviate.cloud"
+#url = "https://wdddqkdjqfwdxaklotxqqa.c0.europe-west3.gcp.weaviate.cloud"
+url = "https://tvyyynnzr2cvrivypkgq6w.c0.europe-west3.gcp.weaviate.cloud"
 
 @st.cache_resource
 def load_model():
